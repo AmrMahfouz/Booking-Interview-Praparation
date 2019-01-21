@@ -6,8 +6,8 @@ import java.util.List;
 public class PerfectSquares {
 
     public static void main(String[] args) {
-//        System.out.println(numOfPerfectSquares(5));
-//        System.out.println(numOfPerfectSquares(7));
+        System.out.println(numOfPerfectSquares(5));
+        System.out.println(numOfPerfectSquares(7));
         System.out.println(numOfPerfectSquares(12));
         System.out.println(numOfPerfectSquares(20));
         System.out.println(numOfPerfectSquares(99));
