@@ -54,9 +54,11 @@ public class KBiggestFiles {
         while (!queue.isEmpty()) {
             Node node = queue.poll();
             if (node.size != 0 && node.children.isEmpty()) { // it is a file not a directory
-                minHeap.add(node.size);
-                if (minHeap.size() > k) {
+                if (minHeap.size() < k) {
+                    minHeap.add(node.size);
+                } else if (minHeap.peek() < node.size) {
                     minHeap.poll();
+                    minHeap.add(node.size);
                 }
             } else {
                 for (Node child : node.children) {
